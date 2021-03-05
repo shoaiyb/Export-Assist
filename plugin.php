@@ -2,7 +2,7 @@
 /*
  Plugin Name: Export Assist
  Plugin URI: https://www.shoaiybsysa.ga/export-assist
- Description: The only Plugin that help you to easily Export Wordpress Posts and Pages to Blogspot in XML format.
+ Description: A simple plugin that help you to easily export wordpress data to blogger in xml.
  Version: 1.0
  Author: shoaiyb sysa
  Author URI: https://www.shoaiybsysa.ga
@@ -26,7 +26,7 @@ function ew2bc_main(){
 
 function ew2bc_download(){
 	if ( isset($_GET["ew2bc_download"]) && ctype_xdigit($_GET["ew2bc_download"]) && is_admin() && isset($_GET["ew2bc_nonce"]) && current_user_can('export') ) {
-		require_once dirname(__FILE__) . '/go.php';
+		require_once dirname(__FILE__) . 'go.php';
 		die();
 	}
 }
